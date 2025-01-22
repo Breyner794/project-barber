@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Barbería</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .about-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .gallery-section {
+            padding: 80px 0;
+        }
+        
+        .footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #d4af37;
+        }
+        
+        .cta-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sección Hero -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-3 mb-4">Caballeros del señor💈</h1>
+            <p class="lead">Cree en Dios y se mejor. Nuestro enfoque está en marcar la diferencia</p>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="/img/Fundador.webp" alt="Barbero Principal" class="img-fluid rounded-circle mb-4">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="mb-4">Junior Castillo</h1>
+                    <p class="lead">Maestro Barbero con más de 10 años de experiencia</p>
+                    <p>Especializado en cortes clásicos y modernos, degradados y diseños personalizados. Mi pasión es ayudar a cada cliente a encontrar el estilo perfecto que refleje su personalidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Fotos -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Nuestros Trabajos</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="/img/cortes/cortes (1).jpg" alt="Corte 1" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4">
+                    <img src="/img/cortes/cortes (2).jpg" alt="Corte 2" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4">
+                    <img src="/img/cortes/cortes (3).jpg" alt="Corte 3" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4">
+                    <img src="/img/cortes/cortes (4).jpg" alt="Corte 4" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4">
+                    <img src="/img/cortes/cortes (4).webp" alt="Corte 5" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4">
+                    <img src="/img/cortes/cortes (5).webp" alt="Corte 6" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón de Reservas Flotante -->
+    <div class="cta-button">
+        <a href="#" class="btn btn-primary btn-lg">
+            <i class="fas fa-calendar-alt me-2"></i>Reserva tu cita
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="social-icons mb-4">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>© 2025 Caballeros del señor. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle con Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para controlar la visibilidad del botón -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctaButton = document.querySelector('.cta-button');
+            const footer = document.querySelector('.footer');
+            
+            function checkButtonVisibility() {
+                const footerRect = footer.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                // Si el footer está visible en la ventana
+                if (footerRect.top < windowHeight) {
+                    ctaButton.classList.add('hide');
+                } else {
+                    ctaButton.classList.remove('hide');
+                }
+            }
+
+            // Verificar en el scroll y en el resize
+            window.addEventListener('scroll', checkButtonVisibility);
+            window.addEventListener('resize', checkButtonVisibility);
+            
+            // Verificar inicialmente
+            checkButtonVisibility();
+        });
+    </script>
+</body>
+</html>
