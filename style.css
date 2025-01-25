@@ -1,0 +1,133 @@
+.hero-section {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 59px 0;
+    text-align: center;
+}
+
+.about-section {
+    padding: 80px 0;
+    background-color: rgb(215, 212, 205);
+    color: rgb(191, 37, 37);
+    font-size: 30px;
+}
+
+.gallery-section {
+    padding: 80px 0;
+    background-color: rgb(0, 68, 103);
+    color: rgb(255, 255, 255);
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 0;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d4af37;
+}
+
+.cta-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.cta-button.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+/* Estilo de la pagina de reservas */
+
+#body_reserva_cita{
+    background-color: rgb(0, 68, 103);
+}
+
+#hero_reserva{
+    background-color: rgb(215, 212, 205);
+    color: black;
+}
+
+.lead{
+    font-size: 30px;
+}
+
+#navbar_reserva{
+    background-color: rgb(0, 0, 0);
+}
+
+.barra_nav_reserva{
+    display: flex;
+    justify-content: space-between; /* Separa los elementos */
+    align-items: center;
+}
+
+#tituloNombre{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    border: #1a1a1a;
+    margin: 0 auto;
+    background: linear-gradient(to left, red, white, blue, white, red);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: barberPole 5s linear infinite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes barberPole {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 200%; }
+}
+
+
+.link_nav_reserva{
+    margin-left: auto;
+    font-size: 18px;
+}
+
+.link_nav_reserva a{
+    color: rgb(215, 212, 205);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.link_nav_reserva a:hover{
+    color: rgb(191, 37, 37);
+    text-decoration: underline;
+    margin: 0 10px;
+}
+
+#reserva_cita{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    color: white;
+}
+
+.tituloReserva{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    border: #1a1a1a;
+    margin: 0 auto;
+    background: linear-gradient(to left, red, white, blue, white, red);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: barberPole 5s linear infinite;
+}
